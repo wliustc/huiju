@@ -1,0 +1,41 @@
+{
+  "name": "huiju",
+  "version": "1.0.0",
+  "description": "收集各种1元秒杀商品和微信优惠活动信息，以web和手机端 展示数据，提供数据的分类，快速推送服务",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/46602907/huiju"
+  },
+  "keywords": [
+    "爬虫",
+    "web推送"
+  ],
+  "author": "江文奇 杨伟 张佳懿 穆俊",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/46602907/huiju/issues"
+  },
+  "homepage": "https://github.com/46602907/huiju",
+  "dependencies": {
+    "async": "^1.5.0",
+    "cheerio": "^0.19.0",
+    "eventproxy": "^0.3.4",
+    "mongoose": "^4.2.4",
+    "q": "^1.4.1",
+    "superagent": "^1.4.0"
+  },
+  "devDependencies": {
+    "benchmark": "^1.0.0",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "mocha-lcov-reporter": "^1.0.0",
+    "mocha-phantomjs": "^4.0.1",
+    "should": "^7.1.1",
+    "supertest": "^1.1.0"
+  }
+}
