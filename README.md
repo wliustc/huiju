@@ -51,22 +51,37 @@
 	package.json *(依赖文件，就认为是pom吧)*
 
 技术栈介绍： *（node 我们用得框架，都是TJ大神编写，每个框架里 都有一个readme.md，里面有示例和介绍，如果还看不懂，可以先咨询团队成员，然后看框架里的源码）后续大家持续添加进去吧，特别是web相关的还有很多如session,cookie,uuid,md5 xss,文件上传下载等, 还有七牛 和极光，都有相关框架哦*
+
 1、node package.json *（npm 使用的）*
+
 2、async  *异步流程控制库 --控制并发速度*
+
 3、eventproxy  *异步流程控制库- -订阅发布*
+
 4、mongoose  *mongodb连接工具带ORM功能*
+
 5、superagent *爬虫*
+
 6、benchmark  *性能测试，可以评估方法执行时间*
+
 7、coveralls *测试覆盖率工具整合bager*
+
 8、mocha  *单元测试*
+
 9、mocha-phantomjs *能够测试html里的js 的单元测试*
+
 10、q	*解决金字塔递归的 承诺函数库*
+
 11、should  *断言库*
+
 12、supertest  *单元测试中，用于模拟客户端请求服务端的组件*
 
 13、koa  *mvc 框架*
+
 14、angularjs *前端js mvvm模式框架*
+
 15、bootstrapcss *前端css*
+
 16、Makefile *项目安装描述*
 
 其他无需关注的
@@ -90,6 +105,8 @@ random
 */
 如:console.log('hello'.green);
 
+（运行时性能监控newrelic）
+https://cnodejs.org/topic/53fde58d7c1e2284785cd39e
 
 
 ## 测试
