@@ -108,6 +108,10 @@ random
 （运行时性能监控newrelic）
 https://cnodejs.org/topic/53fde58d7c1e2284785cd39e
 
+koa 中间件 https://github.com/koajs/koa/wiki
+
+lodash 对数组操作 map reduce等
+
 
 ## 测试
 
