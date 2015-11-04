@@ -9,11 +9,10 @@ before_script:
   - sleep 15
   - mongo huiju_test #--eval 'db.addUser("travis", "test");'
 env:
-  - dev=true
+  - NODE_ENV=test
 service_name: travis-pro
 repo_token: C66RFjqQ1uG6Z43TJB7gmiyywUjL3dhpZ
-script: make test-cov
-after_success: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+script: make test
 
 #before_install:
 #  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-laika/master/configure.sh | /bin/sh"
