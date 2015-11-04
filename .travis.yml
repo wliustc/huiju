@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-  - "4.1.x"
+  - "node"
   - "iojs"
 services:
   - mongodb
   - redis-server
 before_script:
   - sleep 15
-  - mongo mydb_test --eval 'db.addUser("travis", "test");'
+  - mongo huiju_test #--eval 'db.addUser("travis", "test");'
 env:
   - dev=true
 service_name: travis-pro
