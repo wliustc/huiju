@@ -1,20 +1,11 @@
 language: node_js
 node_js:
-  - "node"
-  - "iojs"
+  - '4.0.0'
+  - '5.0.0'
+  - 'iojs'
 services:
   - mongodb
-  - redis-server
-before_script:
-  - sleep 15
-  - mongo huiju_test #--eval 'db.addUser("travis", "test");'
-env:
-  - NODE_ENV=test
-service_name: travis-pro
-repo_token: C66RFjqQ1uG6Z43TJB7gmiyywUjL3dhpZ
-script: make test
+  - redis
 
-#before_install:
-#  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-laika/master/configure.sh | /bin/sh"
-#env:
-# - LAIKA_OPTIONS="-t 5000"
+script: make test
+after_success: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
