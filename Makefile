@@ -1,8 +1,8 @@
-TESTS = $(shell find spider/. app/. -type f -name "*.test.js")
+TESTS = $(shell find test -type f -name "*.test.js")
 TEST_TIMEOUT = 5000
 MOCHA_REPORTER = spec
-NPM_REGISTRY = "--registry=http://registry.npm.taobao.org"
-#NPM_REGISTRY = ""
+#NPM_REGISTRY = "--registry=http://registry.npm.taobao.org"
+NPM_REGISTRY = ""
 
 
 all: test
@@ -27,7 +27,6 @@ test-cov cov: install pretest
 		./node_modules/.bin/_mocha \
 		-- \
 		-r should \
-		-r test/env \
 		--reporter $(MOCHA_REPORTER) \
 		--timeout $(TEST_TIMEOUT) \
 		$(TESTS)
