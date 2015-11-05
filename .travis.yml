@@ -3,14 +3,11 @@ sudo: false
 language: node_js
 
 env:
-  - CXX=g++-4.8
-  - NODE_ENV=test
+  - CXX=g++-4.8 NODE_ENV=test
 node_js:
-  - '0.10'
-  - '0.12'
   - 'iojs'
   - '4'
-
+  - '5'
 addons:
   apt:
     sources:
