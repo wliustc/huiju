@@ -1,0 +1,25 @@
+var models = require('../models');
+var Goods = models.Goods;
+exports.count = function(openURL, cb) {
+  Goods.count({
+    openURL: openURL
+  }, cb);
+};
+exports.newAndSave = function(title, content, primePrice, price, pushTime, typeId, salesNum, openURL, imgURL, callback) {
+  var i = exports.count(openURL);
+  if (i && i > 0) {
+    callback('存在同样地址的数据，无法新增!');
+  } else {
+    var goods = new Goods();
+    goods.title = title;
+    goods.content = content;
+    goods.primePrice = primePrice;
+    goods.price = price;
+    goods.pushTime = pushTime;
+    goods.typeId = typeId;
+    goods.salesNum = salesNum;
+    goods.openURL = openURL;
+    goods.imgURL = imgURL;
+    goods.save(callback);
+  }
+};

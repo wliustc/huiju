@@ -5,14 +5,16 @@ var Schema    = mongoose.Schema;
 var GoodsSchema = new Schema({
   title: { type: String }, //标题
   content: { type: String }, //描述
-  prime_price:{ type: Number }, //原价
-  price:{ type: Number }, //现价
+  primePrice:{ type: String }, //原价
+  price:{ type: String }, //现价
+  imgURL: { type: String }, //图片地址
+  openURL: { type: String }, //详情地址
   pushTime:{ type: Date, default: Date.now }, //发布时间
   createTime: { type: Date, default: Date.now }, //创建时间
   updateTime: { type: Date, default: Date.now }, //修改时间
   typeId:{ type: String },//分类id
   deleted: {type: Boolean, default: false} ,//是否删除
-  salesNum:{ type: Number } //销量
+  salesNum:{ type: String } //销量
 });
 
 GoodsSchema.plugin(BaseModel);
