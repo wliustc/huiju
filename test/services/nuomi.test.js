@@ -13,6 +13,9 @@ describe('services/nuomi.test.js', function() {
 		}catch(err){
 			e=err;
 		}
+		setTimeout(function(){
+			done();
+		},4000)
 		should(e).not.be.ok();
 	});
 });
