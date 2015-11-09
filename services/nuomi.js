@@ -31,11 +31,11 @@ exports.getNuomiData = function(cb) {
 			var imgURL = card.find('.borderbox > img').data('original');
 			var contentbox = $(card.find('div.contentbox'));
 			var openURL = contentbox.find('a').attr('href');
-			var title = contentbox.find('a > h4.title').text();
-			var content = contentbox.find('a > p').text();
-			var price = contentbox.find('.pinfo > .price').text();
-			var primePrice = contentbox.find('.ori-price > .price-line').text();
-			var salesNum = contentbox.find('.footer > .sold').text();
+			var title = contentbox.find('a h4.title').text();
+			var content = contentbox.find('a p').text();
+			var price = contentbox.find('.pinfo .price').text();
+			var primePrice = contentbox.find('.ori-price .price-line').text();
+			var salesNum = contentbox.find('.footer .sold').text();
 
 			proxy.Goods.newAndSave(title, content, primePrice, price, null, null, salesNum, openURL, imgURL, function(e, data) {
 				if(e){

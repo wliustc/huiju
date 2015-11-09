@@ -11,17 +11,23 @@ exports.newAndSave = function(title, content, primePrice, price, pushTime, typeI
       callback('存在同样地址的数据，无法新增!');
       return;
     } else {
-      var goods = new Goods();
-      goods.title = title;
-      goods.content = content;
-      goods.primePrice = primePrice;
-      goods.price = price;
-      goods.pushTime = pushTime;
-      goods.typeId = typeId;
-      goods.salesNum = salesNum;
-      goods.openURL = openURL;
-      goods.imgURL = imgURL;
-      goods.save(callback);
+      if (openURL && salesNum && title && content && price && primePrice && imgURL) {
+        var goods = new Goods();
+        goods.title = title;
+        goods.content = content;
+        goods.primePrice = primePrice;
+        goods.price = price;
+        goods.pushTime = pushTime;
+        goods.typeId = typeId;
+        goods.salesNum = salesNum;
+        goods.openURL = openURL;
+        goods.imgURL = imgURL;
+        goods.save(callback);
+      } else {
+
+        callback('存在数据为空的');
+      }
+
     }
   });
 

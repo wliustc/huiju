@@ -7,7 +7,8 @@ describe('services/nuomi.test.js', function() {
 	it('spider Nuomi', function(done) {
 		var e;
 		try{
-			nuomi.getNuomiData(function(){
+			nuomi.getNuomiData(function(errText){
+				console.log(errText);
 				done();
 			});
 		}catch(err){
